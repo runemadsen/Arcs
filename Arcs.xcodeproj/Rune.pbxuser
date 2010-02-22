@@ -1,15 +1,39 @@
 // !$*UTF8*$!
 {
+	1D3623250D0F684500981E51 /* ArcsAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 560}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 604}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* Arcs */ = {
 		activeExec = 0;
 		executables = (
 			A527BF081132EBFD005F9135 /* Arcs */,
 		);
 	};
+	28D7ACF60DDB3853001CB0EB /* ArcsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 560}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 230}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* ArcsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 832}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1098}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = A527BF081132EBFD005F9135 /* Arcs */;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Arcs */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Arcs */,
+		);
 		codeSenseManager = A527BF181132EC03005F9135 /* Code sense */;
 		executables = (
 			A527BF081132EBFD005F9135 /* Arcs */,
@@ -60,6 +84,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -84,5 +109,19 @@
 	A527BF181132EC03005F9135 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	A527BF1F1132ED01005F9135 /* Arcs.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 560}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 192}";
+		};
+	};
+	A527BF201132ED01005F9135 /* Arcs.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 871}}";
+			sepNavSelRange = "{769, 0}";
+			sepNavVisRange = "{389, 1055}";
+		};
 	};
 }

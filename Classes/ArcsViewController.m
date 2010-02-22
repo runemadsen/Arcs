@@ -7,10 +7,9 @@
 //
 
 #import "ArcsViewController.h"
+#import "Arc.h"
 
 @implementation ArcsViewController
-
-
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -22,19 +21,31 @@
 }
 */
 
-/*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
+/*- (void)loadView 
+{
+	
+}*/
 
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidLoad 
+{	
+	CGFloat w = self.view.frame.size.width;
+	CGFloat h = self.view.frame.size.height;
+	
+	for (int i = 0; i < 5; i++) 
+	{
+		CGRect arcFrame = CGRectMake(0, 0, w, h);
+		Arc *arc = [[Arc alloc] initWithFrame:arcFrame];
+		
+		[self.view addSubview:arc];
+		[arc release];
+	}
+	
+	[super viewDidLoad];
 }
-*/
+
 
 
 /*
