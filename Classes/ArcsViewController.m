@@ -1,11 +1,3 @@
-//
-//  ArcsViewController.m
-//  Arcs
-//
-//  Created by Rune Madsen on 2/22/10.
-//  Copyright New York University 2010. All rights reserved.
-//
-
 #import "ArcsViewController.h"
 #import "Arc.h"
 
@@ -29,22 +21,10 @@
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad 
+/*- (void)viewDidLoad 
 {	
-	CGFloat w = self.view.frame.size.width;
-	CGFloat h = self.view.frame.size.height;
-	
-	for (int i = 0; i < 5; i++) 
-	{
-		CGRect arcFrame = CGRectMake(0, 0, w, h);
-		Arc *arc = [[Arc alloc] initWithFrame:arcFrame];
-		
-		[self.view addSubview:arc];
-		[arc release];
-	}
-	
 	[super viewDidLoad];
-}
+}*/
 
 
 

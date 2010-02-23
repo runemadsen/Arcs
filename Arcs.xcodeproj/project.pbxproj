@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* ArcsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ArcsViewController.m */; };
 		A527BF211132ED01005F9135 /* Arcs.m in Sources */ = {isa = PBXBuildFile; fileRef = A527BF201132ED01005F9135 /* Arcs.m */; };
 		A527BF981132FBAF005F9135 /* Arc.m in Sources */ = {isa = PBXBuildFile; fileRef = A527BF971132FBAF005F9135 /* Arc.m */; };
+		A5C9A22F11344F7B00010429 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C9A22E11344F7B00010429 /* UIColor-Expanded.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		A527BF201132ED01005F9135 /* Arcs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arcs.m; sourceTree = "<group>"; };
 		A527BF961132FBAF005F9135 /* Arc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arc.h; sourceTree = "<group>"; };
 		A527BF971132FBAF005F9135 /* Arc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arc.m; sourceTree = "<group>"; };
+		A5C9A22D11344F7B00010429 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
+		A5C9A22E11344F7B00010429 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				28D7ACF70DDB3853001CB0EB /* ArcsViewController.m */,
 				A527BF961132FBAF005F9135 /* Arc.h */,
 				A527BF971132FBAF005F9135 /* Arc.m */,
+				A5C9A22D11344F7B00010429 /* UIColor-Expanded.h */,
+				A5C9A22E11344F7B00010429 /* UIColor-Expanded.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				28D7ACF80DDB3853001CB0EB /* ArcsViewController.m in Sources */,
 				A527BF211132ED01005F9135 /* Arcs.m in Sources */,
 				A527BF981132FBAF005F9135 /* Arc.m in Sources */,
+				A5C9A22F11344F7B00010429 /* UIColor-Expanded.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

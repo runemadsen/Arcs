@@ -2,32 +2,54 @@
 
 @implementation Arc
 
-
-- (id)initWithFrame:(CGRect)frame 
+- (id) init 
 {
-    if (self = [super initWithFrame:frame]) 
+	self = [super init];
+	
+	if (self != nil) 
 	{
-        _radius = arc4random() % 200;
-    }
-    return self;
+		//_radius = arc4random() % 200;
+		//_radius = 200;
+	}
+	
+	return self;
 }
 
+/* Setters
+ ________________________________________________________________________________ */
 
-- (void)drawRect:(CGRect)rect 
-{	
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	
-	CGContextSaveGState(context); // pushmatrix
-	CGContextTranslateCTM(context, rect.size.width, rect.size.height); // translate
-	
-	CGContextSetRGBStrokeColor(context, 0, 0.5, 0, 1);
-	CGContextSetLineWidth(context, 15);
-	
-	CGContextAddArc(context, 0, 0, _radius, radians(180), radians(270), 0);
-	
-	CGContextStrokePath(context);
+- (void) setColor:(UIColor *) color
+{
+	_color = color;
 }
 
+- (void) setRadius:(CGFloat) radius
+{
+	_radius = radius;
+}
+
+- (void) setLocation:(CGPoint) location
+{
+	_location = location;
+}
+
+/* Init
+ ________________________________________________________________________________ */
+
+- (CGFloat) getRadius
+{
+	return _radius;
+}
+
+- (CGPoint) getLocation
+{
+	return _location;
+}
+
+- (UIColor *) getColor
+{
+	return _color;
+}
 
 - (void)dealloc 
 {

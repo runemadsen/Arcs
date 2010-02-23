@@ -1,18 +1,18 @@
-//
-//  Arc.h
-//  Arcs
-//
-//  Created by Rune Madsen on 2/22/10.
-//  Copyright 2010 New York University. All rights reserved.
-//
+#import <Foundation/Foundation.h>
 
-#import <UIKit/UIKit.h>
-
-
-@interface Arc : UIView {
-
+@interface Arc : NSObject  
+{
+	CGFloat _radius;
+	UIColor * _color;
+	CGPoint _location;
 }
 
-CGFloat _radius;
+- (void) setColor:(UIColor *) color;
+- (void) setRadius:(CGFloat) radius;
+- (void) setLocation:(CGPoint) location;
+
+- (CGFloat) getRadius;
+- (UIColor*) getColor;
+- (CGPoint) getLocation;
 
 @end
