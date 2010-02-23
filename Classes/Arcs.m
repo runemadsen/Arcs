@@ -17,44 +17,22 @@ ________________________________________________________________________________
 
 - (void) awakeFromNib
 {
-	UIColor * color1 = [[UIColor colorWithRed:(64.0 / 255.0) green:(55.0 / 255.0) blue:(103.0 / 255.0) alpha: 1] retain];
-	UIColor * color2 = [[UIColor colorWithRed:(229.0 / 255.0) green:(242.0 / 255.0) blue:(226.0 / 255.0) alpha: 1] retain];
-	UIColor * color3 = [[UIColor colorWithRed:(85.0 / 255.0) green:(133.0 / 255.0) blue:(202.0 / 255.0) alpha: 1] retain];
-	UIColor * color4 = [[UIColor colorWithRed:(122.0 / 255.0) green:(194.0 / 255.0) blue:(152.0 / 255.0) alpha: 1] retain];
-	UIColor * color5 = [[UIColor colorWithRed:(73.0 / 255.0) green:(117.0 / 255.0) blue:(57.0 / 255.0) alpha: 1] retain];
-	UIColor * color6 = [[UIColor colorWithRed:(131.0 / 255.0) green:(110.0 / 255.0) blue:(80.0 / 255.0) alpha: 1] retain];
-	UIColor * color7 = [[UIColor colorWithRed:(240.0 / 255.0) green:(133.0 / 255.0) blue:(42.0 / 255.0) alpha: 1] retain];
-	UIColor * color8 = [[UIColor colorWithRed:(255.0 / 255.0) green:(206.0 / 255.0) blue:(86.0 / 255.0) alpha: 1] retain];
-	UIColor * color9 = [[UIColor colorWithRed:(255.0 / 255.0) green:(70.0 / 255.0) blue:(39.0 / 255.0) alpha: 1] retain];
-	UIColor * color10 = [[UIColor colorWithRed:(124.0 / 255.0) green:(52.0 / 255.0) blue:(51.0 / 255.0) alpha: 1] retain];
 	
-	_colors = [NSArray arrayWithObjects: color1, color2, color3, color4, color5, color6, color7, color8, color9, color10, nil];
-	_arcs = [[NSMutableArray alloc] init];
-	
-	int radius = 300;
-	
-	for (int i = 0; i < NUM_ARCS; i++) 
-	{
-		Arc * arc = [[Arc alloc] init];
-		[arc setColor: [_colors objectAtIndex:i]];
-		[arc setRadius:radius];
-		[_arcs addObject:arc];
-	
-		radius -= 20;
-	}	
 }
+
 
 /* Draw
 ________________________________________________________________________________ */
 
-- (void)drawRect:(CGRect)rect 
+- (void) drawRect:(CGRect)rect 
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
 	// draw background
 	CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
 	CGContextFillRect(context, rect);
-	 
+	
+	// draw arcs
 	 
 	CGContextSaveGState(context); // pushmatrix
 	CGContextTranslateCTM(context, rect.size.width, rect.size.height); // translate
@@ -73,7 +51,71 @@ ________________________________________________________________________________
 	}
 	
 	CGContextRestoreGState(context); // popmatrix 
+	
+	// Draw text
+	
+	CGContextSaveGState(context);
 
+	CGContextTranslateCTM(context, 0, rect.size.height);
+	CGContextScaleCTM(context, 1, -1);
+	
+    CGContextSelectFont (context, "Helvetica-Bold", 40, kCGEncodingMacRoman);
+    CGContextSetCharacterSpacing (context, 1); 
+	//
+	
+	NSString * message = @"Rune Madsen";
+	int radius = 100;
+	CGFloat arcLength = 0;
+	int tWidth = 50;
+	
+	for (int i = 0; i < [message length]; i++)              
+	{   
+		printf("here");
+		
+		unichar currentChar = [message characterAtIndex:i];
+		
+		//float w = textWidth(currentChar);   
+		
+		//arcLength += 10/2; // textwidth divided by w
+		
+		//arcLength += tWidth/2;
+		
+		CGFloat theta = PI + arcLength / radius; 
+		
+		CGContextSaveGState(context);
+		CGContextTranslateCTM(context, -(radius*sin(theta)), (radius*cos(theta)));
+		//CGContextRotateCTM(context, -(theta + PI/2));
+		
+		//myTextTransform = CGAffineTransformMakeRotation(theta + PI/2); 
+		//CGContextSetTextMatrix(context, myTextTransform);
+		
+		CGContextSetRGBFillColor(context, 1, 1, 1, 1); 
+		
+		CGContextShowTextAtPoint(context, 0, 300, &currentChar, 1);
+		
+		CGContextRestoreGState(context);
+		
+		arcLength += tWidth/2;
+	}
+	
+	//
+	
+	CGContextSetRGBFillColor(context, 1, 1, 1, 1);
+	CGContextSetTextDrawingMode (context, kCGTextFill); 
+	//CGAffineTransform myTextTransform;
+    //myTextTransform = CGAffineTransformMakeRotation(radians(180)); 
+    //CGContextSetTextMatrix(context, myTextTransform); 
+    CGContextShowTextAtPoint(context, 20, 400 , "Rune Madsen", 11);
+	
+	CGContextRestoreGState(context);
+}
+
+/* Getter / Setter
+ ________________________________________________________________________________ */
+
+- (void) setArcs: (NSMutableArray *) arcs
+{
+	_arcs = arcs;
 }
 
 /* Deallocate

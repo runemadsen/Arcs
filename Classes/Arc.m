@@ -8,8 +8,6 @@
 	
 	if (self != nil) 
 	{
-		//_radius = arc4random() % 200;
-		//_radius = 200;
 	}
 	
 	return self;
@@ -33,7 +31,7 @@
 	_location = location;
 }
 
-/* Init
+/* Getters
  ________________________________________________________________________________ */
 
 - (CGFloat) getRadius
