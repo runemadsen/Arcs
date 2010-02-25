@@ -8,6 +8,7 @@
 	
 	if (self != nil) 
 	{
+		_angle = 90.0;
 	}
 	
 	return self;
@@ -31,6 +32,11 @@
 	_location = location;
 }
 
+- (void) setAngle:(CGFloat) angle
+{
+	_angle = angle;
+}
+
 /* Getters
  ________________________________________________________________________________ */
 
@@ -47,6 +53,11 @@
 - (UIColor *) getColor
 {
 	return _color;
+}
+
+- (CGFloat) getAngle
+{
+	return _angle;
 }
 
 - (void)dealloc 

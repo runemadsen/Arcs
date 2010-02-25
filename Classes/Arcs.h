@@ -8,6 +8,7 @@
 @interface Arcs : UIView 
 {
 	NSMutableArray * _arcs;
+	int selectedArc;
 }
 
 - (void) setArcs: (NSMutableArray *) arcs;
